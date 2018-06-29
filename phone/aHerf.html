@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+    </head>
+    <body class="um-vp bc-bg ub-ver" ontouchstart>
+        <div class="ub ub-ver">
+            <div id="slider" class="slider">
+
+            </div>
+            <div id="listview">
+22222222222222222222
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.slider.js"></script>
+        <script src="js/appcan.listview.js"></script>
+    </body>
+    <script>
+        appcan.ready(function() {
+            appcan.initBounce();
+        })
+        var slider = appcan.slider({
+            selector : '#slider',
+            aspectRatio : 9 / 16,
+            hasLabel : true,
+            index : 1
+        });
+        slider.set([{
+            img : "images/1.jpg",
+            label : "广告位置"
+        }, {
+            img : "images/1.jpg",
+            label : "茉莉每天更新上万资源"
+        }, {
+            img : "images/1.jpg",
+            label : "广告位置"
+        }]);
+
+        var updateData = [{
+            title : " Cf手游美化版-擎",
+            describe : "国 美化内容。 1潘多拉衣服美化 2手臂。潘多拉改兰。猎狐改灵狐还有夜玫瑰 3M4美化雨伞黑骑士 4铲子美化擎天，（你们想要的那个~苏苏给的） 5暗金改玫瑰精灵 6AK改黑骑士AK版",
+            note : "78跟帖",    
+        }, {
+            title : "唰QB**版装逼软件",
+            describe : "下载地址：http://pan.baidu.com/s/1bnYa8qV",
+            note : "78跟帖",
+        }, {
+            title : "QQ24个图标快捷点亮助手",
+            describe : "http://pan.baidu.com/s/1bor6P59",
+            note : "78跟帖",
+        }, {
+            title : " 十五年我爱刷屏器 ",
+            describe : "http://pan.baidu.com/s/1jHe7Cua",
+            note : "78跟帖",
+        }, {
+            title : "超级QQ秒开助手",
+            describe : "http://pan.baidu.com/s/1mh3vcHa",
+            note : "78跟帖",
+        }, {
+            title : " 星辰盒子V4.0最贴",
+            describe : "http://pan.baidu.com/s/1eQZVdTK",
+            note : "78跟帖",
+        }, {
+            title : " 永硕网盘装饰器3.0",
+            describe : "http://pan.baidu.com/s/1kUm3o5x",
+            note : "78跟帖",
+        }, {
+            title : " 首发安卓在线闪退",
+            describe : "http://pan.baidu.com/s/1W9tSU",
+            note : "78跟帖",
+        }, {
+            title : "9.9斯巴迪男**夏季薄款男人袜子男士商务中筒**",
+            describe : "地址https://detail.m.tmall.com/item. ... perties=20509:28383",
+            note : "78跟帖",
+        }];
+        var lv1 = appcan.listview({
+            selector : "#listview",
+            type : "thickLine",
+            hasIcon : true,
+            hasAngle : false
+        });
+        lv1.set(updateData);
+        lv1.on("click",function(ele,obj,curEle){
+     appcan.window.open('yy_content','home.html',10,1024);
+})
+
+    </script>
+</html>

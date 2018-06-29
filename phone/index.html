@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    
+    <head>
+        <title>
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    
+    <body class="" ontouchstart>
+        <div id="header" class="uh bc-text-head ub bc-head">
+            <div class="nav-btn" id="nav-left">
+                <div class="fa fa-angle-left fa-2x"></div>
+            </div>
+            <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">标题</h1>
+            <div class="nav-btn" id="nav-right">
+                <div class="ub-img icon-edit umw2 umh4"></div>
+            </div>
+        </div>
+        <div id="slider" class="slider">
+        </div>
+        <div class="btn ub ub-ac bc-text-head ub-pc bc-btn"  id="btn">
+                                跳转页面aaa
+        </div>
+        <div class="btn ub ub-ac bc-text-head ub-pc bc-btn uc-a1"  id="btn1">
+                                按钮
+        </div>
+        <div class="btn ub ub-ac bc-text-head ub-pc bc-btn uc-a1"  id="btn2">
+        <div class="uinn3 fa fa-check umh1 umw1"></div>
+                                导航
+        </div>
+
+        <div class="uw-app1" id="home">
+            assf
+        </div>
+        <!-- 组件 -->
+        
+        <component data-import="compontent1.html"></component>
+        
+        <script src="js/appcan.js">
+        </script>
+        <script src="js/appcan.control.js">
+        </script>
+        <script src="js/appcan.scrollbox.js">
+        </script>
+        <script src="js/template.import.js">
+        </script>
+        <script src="./assets/mvvm/index.js">
+        </script>
+        <script src="./js/index.js">
+        </script>
+   <script src="js/appcan.slider.js"></script>    
+   <script>
+   appcan.ready(function() {
+            appcan.initBounce();
+        })
+   var slider = appcan.slider({
+                  selector : '#slider',
+                  aspectRatio:9/16,
+                  hasLabel:false,
+                  index:0,
+                  auto:5000,
+                  hasCircle:false
+                });
+        slider.set([{
+            img : "./images/1.jpg",
+            label:"aaa"
+        }, {
+            img : "./images/1.jpg",
+            label:"bbb"
+        }, {
+            img : "./images/1.jpg",
+            label:"ccc"
+        }, {
+            img : "./images/1.jpg",
+            label:"ddd"
+        }, {
+            img : "./images/1.jpg",
+            label:"eee"
+        }])
+        slider.on("clickItem",function(index,data){
+
+        })
+        // 页面跳转 
+      appcan.button('#btn',"ani-act",function(){  
+         appcan.window.open('home',"home.html",10)
+         // appcan.window.open('yy_content','home.html',10,1024);                     
+      })
+      // 弹出框
+       appcan.button('.uw-app1',"btn-act",function(a,b){
+          var btn = $(a.currentTarget);
+          var btn_id = btn.attr('id');
+          if(btn_id){
+              appcan.window.open(btn_id,btn_id+'.html',10);
+          }
+          
+      })
+      appcan.button('#btn1',"ani-act",function(){
+          // alert('111')
+          
+          appcan.logs('ele')
+          console.log('ele')
+      })
+      // 页面跳转 
+      // appcan.button(".btn", "ani-act", function() {
+            /*添加按钮点击处理代码*/
+            // alert("运行");       
+              // appcan.window.open({
+                 // name:'home',
+                 // dataType:0,
+                 // aniId:2,
+                 // data:"home.html",
+                 // extraInfo:{
+                     // opaque:true,
+                     // bgColor:bg
+                 // }
+         // })
+        // })
+      // var aa = appcan.listview({
+          // selector:"#aaa"
+      // })
+      // aa.on("click",function(){
+          // appcan.window.open()
+      // })
+      
+    </script>
+ </body>
+
+</html>
