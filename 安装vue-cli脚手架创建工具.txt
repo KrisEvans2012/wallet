@@ -1,0 +1,26 @@
+安装vue
+
+打开浏览器，右上角更多工具--> 扩展程序--》开发者模式--》加载以压解的扩张程序
+
+找到E盘下--demo--vue--devtools--shells--chrome
+
+克隆： git clone https://github.com/vuejs/vue-devtools.git
+
+克隆好之后在vue-devtools文件夹里面打开cmd命令
+cnpm install
+cnpm run build 开启服务器
+
+
+
+
+安装vue-cli脚手架创建工具
+
+npm install -g vue-cli
+
+使用vue-cli创建脚手架
+vue init 脚手架类型 项目的名字   如webpack
+
+进入该项目文件  
+cnpm install
+
+npm run dev  开启
