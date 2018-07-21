@@ -47,7 +47,7 @@ header{
 @keyframes myfirst
 {
 from {left: 0px}
-to {left: 700px;}
+to {left: 600px;}
 }
 .content{
 	width: 80%;
