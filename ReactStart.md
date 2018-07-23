@@ -1,5 +1,5 @@
 # JSX的语法
-    const element = <h1>hello,world！</h1>
+    const element = <h1>hellohellhellohelloo,world！</h1>
 ## 1. 在JSX语法中使用表达式    
     function formatName(user){
         return user.firstName + "" + user.lastName
